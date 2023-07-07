@@ -1,6 +1,75 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Welcome to the Home Page!</h1>
-    <p>This is the content specific to the home page.</p>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to NIELSEN</h1>
+        <p>Your Trusted Partner in Accident Analysis</p>
+        <a href="{{ url_for('about') }}" class="btn">Learn More</a>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="{{ url_for('static', filename='data-analysis.png') }}" alt="Data Analysis">
+            <h3>Data Analysis</h3>
+            <p>We provide in-depth data analysis to uncover patterns and insights related to accidents.</p>
+        </div>
+        <div class="service">
+            <img src="{{ url_for('static', filename='visualization.png') }}" alt="Visualization">
+            <h3>Visualization</h3>
+            <p>We create stunning visualizations to help you understand complex accident data.</p>
+        </div>
+        <div class="service">
+            <img src="{{ url_for('static', filename='reporting.png') }}" alt="Reporting">
+            <h3>Reporting</h3>
+            <p>Our comprehensive reports provide actionable recommendations to improve safety measures.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="1container">
+        <h2>Ready to Make Roads Safer?</h2>
+        <a href="{{ url_for('signup') }}" class="btn">Get Started</a>
+    </div>
+</section>
+<style>
+    .hero {
+        background-image: url('static/ocean.png');
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hero-content {
+        text-align: center;
+        color:black;
+      }
+      
+      .hero-content h1 {
+        font-size: 90px;
+        margin-bottom: 10px;
+        opacity:0.5;
+      }
+      .hero-content h1:hover {
+        opacity: 0.2;
+        color:#94b8b8;
+      }
+      
+      .hero-content p {
+        font-size: 18px;
+      }
+      .container{
+        background-color:;
+      }
+      .service{
+        background-color:gey;
+      }
+</style>
 {% endblock %}
